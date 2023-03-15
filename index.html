@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble Animations</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bubbles">
+      <div class="burbuja_mediana">
+        <img class="burbuja bm" id="bm1" src="/bubble.png" alt="" />
+        <img class="burbuja bm" id="bm2" src="/bubble.png" alt="" />
+        <img class="burbuja bm" id="bm3" src="/bubble.png" alt="" />
+        <img class="burbuja bm" id="bm4" src="/bubble.png" alt="" />
+        <img class="burbuja bm" id="bm5" src="/bubble.png" alt="" />
+        <img class="burbuja bm" id="bm6" src="/bubble.png" alt="" />
+      </div>
+      <div class="burbuja_pequena">
+        <img class="burbuja bp" id="bp1" src="/bubble.png" alt="" />
+        <img class="burbuja bp" id="bp2" src="/bubble.png" alt="" />
+        <img class="burbuja bp" id="bp3" src="/bubble.png" alt="" />
+        <img class="burbuja bp" id="bp4" src="/bubble.png" alt="" />
+      </div>
+      <div class="burbuja_blur">
+        <img class="burbuja bb" id="bb1" src="/bubble.png" alt="" />
+        <img class="burbuja bb" id="bb2" src="/bubble.png" alt="" />
+        <img class="burbuja bb" id="bb3" src="/bubble.png" alt="" />
+        <img class="burbuja bb" id="bb4" src="/bubble.png" alt="" />
+        <img class="burbuja bb" id="bb5" src="/bubble.png" alt="" />
+      </div>
+      <div class="botones">
+        <button class="buttons" id="red">RED</button>
+        <button class="buttons" id="blue">BLUE</button>
+        <button class="buttons" id="black">BLACK</button>
+      </div>
+    </div>
+
+    <script>
+      let red = document.getElementById("red");
+      let blue = document.getElementById("blue");
+      let black = document.getElementById("black");
+      let burbujas = document.querySelectorAll(".burbuja");
+      red.addEventListener("click", () => {
+        for (let i = 0; i < burbujas.length; i++) {
+          burbujas[i].style.filter = "opacity(0)";
+          setTimeout(() => {
+            burbujas[i].src = "/bubbleRed.png";
+            setTimeout(() => {
+              burbujas[i].style.filter = "opacity(1)";
+            }, 300);
+          }, 300);
+        }
+      });
+      blue.addEventListener("click", () => {
+        for (let i = 0; i < burbujas.length; i++) {
+          burbujas[i].style.filter = "opacity(0)";
+          setTimeout(() => {
+            burbujas[i].src = "/bubbleBlue.png";
+            setTimeout(() => {
+              burbujas[i].style.filter = "opacity(1)";
+            }, 300);
+          }, 300);
+        }
+      });
+      black.addEventListener("click", () => {
+        for (let i = 0; i < burbujas.length; i++) {
+          burbujas[i].style.filter = "opacity(0)";
+          setTimeout(() => {
+            burbujas[i].src = "/bubble.png";
+            setTimeout(() => {
+              burbujas[i].style.filter = "opacity(1)";
+            }, 300);
+          }, 300);
+        }
+      });
+    </script>
+  </body>
+</html>

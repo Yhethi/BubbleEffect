@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #1e1e1e;
+}
+
+.bubbles {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Burbuja Mediana */
+
+.bm {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+#bm1 {
+  animation: subir 8s ease infinite;
+}
+
+#bm2 {
+  margin-left: 25vw;
+  animation: subir2 10s ease infinite;
+}
+
+#bm3 {
+  width: 90px;
+  height: 90px;
+  margin-left: 50vw;
+  animation: subir3 11s ease infinite;
+}
+
+#bm4 {
+  width: 110px;
+  height: 110px;
+  margin-left: 75vw;
+  animation: subir4 8s ease infinite;
+}
+
+#bm5 {
+  width: 110px;
+  height: 110px;
+  margin-left: 90vw;
+  animation: subir2 8s ease infinite;
+}
+
+#bm6 {
+  width: 180px;
+  height: 180px;
+  margin-left: 40vw;
+  margin-top: 40vh;
+  animation: flotar 5s ease infinite;
+}
+/* Burbuja Pequeña */
+
+.bp {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  /* bottom: 0; */
+}
+
+#bp1 {
+  animation: subirp 4s ease infinite;
+}
+
+#bp2 {
+  margin-left: 25vw;
+  animation: subirp2 2s ease infinite;
+}
+
+#bp3 {
+  margin-left: 50vw;
+  animation: subirp3 5s ease infinite;
+}
+
+#bp4 {
+  margin-left: 75vw;
+  animation: subirp4 6s ease infinite;
+}
+
+/* Burbuja Blur */
+
+.bb {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  /* bottom: 0; */
+}
+
+#bb1 {
+  animation: subir 1s ease infinite;
+}
+
+#bb2 {
+  margin-left: 25vw;
+  animation: subirp3 2s ease infinite;
+}
+
+#bb3 {
+  margin-left: 50vw;
+  animation: subir2 1s ease infinite;
+}
+
+#bb4 {
+  margin-left: 75vw;
+  animation: subirp4 2s ease infinite;
+}
+#bb5 {
+  margin-left: 90vw;
+  animation: subir2 2s ease infinite;
+}
+
+@keyframes subir {
+  0% {
+    bottom: -10%;
+  }
+  25% {
+    transform: translateX(-50px);
+  }
+  75% {
+    transform: translateX(50px);
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+@keyframes subir2 {
+  0% {
+    bottom: -10%;
+  }
+  25% {
+    transform: translateX(-80px);
+  }
+  75% {
+    transform: translateX(80px);
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes subir3 {
+  0% {
+    bottom: -10%;
+  }
+  25% {
+    transform: translateX(-70px);
+  }
+  75% {
+    transform: translateX(70px);
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes subir4 {
+  0% {
+    bottom: -10%;
+  }
+  25% {
+    transform: translateX(-30px);
+  }
+  75% {
+    transform: translateX(30px);
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes subirp {
+  0% {
+    bottom: -10%;
+  }
+  25% {
+    transform: translateX(-50px);
+  }
+  75% {
+    transform: translateX(50px);
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes subirp2 {
+  0% {
+    bottom: -10%;
+  }
+  25% {
+    transform: translateX(-50px);
+  }
+  75% {
+    transform: translateX(50px);
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes subirp3 {
+  0% {
+    bottom: -10%;
+  }
+  25% {
+    transform: translateX(-50px);
+  }
+  75% {
+    transform: translateX(50px);
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes subirp4 {
+  0% {
+    bottom: -10%;
+  }
+  25% {
+    transform: translateX(-50px);
+  }
+  75% {
+    transform: translateX(50px);
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes flotar {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(-17px) matrix(1.2, 0.2, 0, 1.1, 0, 0);
+  }
+  40% {
+    transform: translateY(-22px) matrix(1, -0.2, 0, 1, 0, 0);
+  }
+  50% {
+    transform: translateY(-70px);
+  }
+}
+
+/* botones */
+
+.botones {
+  width: 100vw;
+  height: 98vh;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 5vw;
+}
+
+.buttons {
+  width: 100px;
+  padding: 1% 04%;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+#red:hover {
+  transition-duration: 0.2s;
+  background: red;
+  color: white;
+  font-weight: 700;
+}
+
+#blue:hover {
+  transition-duration: 0.2s;
+  background: blue;
+  color: white;
+}
+
+#black:hover {
+  transition-duration: 0.2s;
+  background: gray;
+  font-weight: 700;
+}
+
+.burbuja {
+  transition-duration: 0.3s;
+  filter: opacity(1);
+}
